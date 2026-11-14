@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>OKEYHAUL spreadsheet – katalog, rozmiary, zdjęcia QC i wysyłka</title>
+  <meta name="description" content="OKEYHAUL spreadsheet po polsku. Przejdź do kategorii HipobuyFind, porównaj rozmiary, sprawdź zdjęcia QC i zaplanuj koszt wysyłki do Polski.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="OKEYHAUL spreadsheet – katalog i poradnik zakupowy">
+  <meta property="og:description" content="Dziesięć kategorii HipobuyFind oraz praktyczny poradnik o wymiarach, zdjęciach QC i wysyłce do Polski.">
+  <style>
+    :root{--ink:#201a2d;--muted:#594f63;--paper:#faf7f3;--panel:#fff;--line:#e2d9e7;--accent:#fbca83;--dark:#2d203e;color:var(--ink);background:var(--paper);font:100%/1.65 system-ui,sans-serif}
+    *,*::before,*::after{box-sizing:border-box}
+    body,figure{margin:0}
+    h1,h2,h3,p{margin:0 0 .7rem}
+    h1,h2,h3{line-height:1.1}
+    h1{font-size:clamp(2.35rem,6vw,5.1rem);letter-spacing:-.055em;overflow-wrap:anywhere}
+    h2{font-size:clamp(1.65rem,4vw,2.65rem);letter-spacing:-.035em}
+    h3{font-size:1.16rem}
+    a{color:inherit}
+    a:focus-visible,summary:focus-visible{outline:3px solid #a04e17;outline-offset:4px}
+    .wrap{width:min(72rem,calc(100% - 2rem));margin-inline:auto}
+    header{border-bottom:1px solid var(--line);padding:.85rem 0}
+    header a{display:inline-flex;gap:.5rem;align-items:center;font-weight:750;text-underline-offset:.28em}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;overflow:hidden;background:var(--dark);color:#fff;border-radius:1.25rem;margin-top:1.25rem}
+    .intro{padding:clamp(1.4rem,4vw,3.5rem);align-self:center}
+    .intro p{color:#f2e7f5;max-width:49ch}
+    .hero figure{display:grid;align-content:center;background:#ede6f0;color:var(--ink);padding:.85rem}
+    .hero img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;border-radius:.6rem;background:#fff}
+    .button{display:inline-block;margin-top:.55rem;border-radius:.55rem;background:var(--accent);color:#25192d;font-weight:750;padding:.68rem 1rem;text-decoration:none}
+    .button:hover{text-decoration:underline}
+    section{margin-block:2.2rem}
+    .categories,.gallery,.guides{display:grid;gap:.75rem}
+    .categories,.gallery{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .categories a{display:flex;align-items:center;justify-content:space-between;gap:.35rem;padding:.82rem;min-height:3.5rem;text-decoration:none;font-weight:700;background:var(--panel);border:1px solid var(--line);border-radius:.65rem}
+    .categories a:hover{background:#f3eaf7;text-decoration:underline}
+    .categories span{color:#713f86}
+    .gallery figure,.guides article{background:var(--panel);border:1px solid var(--line);border-radius:.75rem;overflow:hidden}
+    .gallery img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#f0eaf2}
+    figcaption{font-size:.85rem;color:var(--muted);padding:.5rem .65rem}
+    .section-note,footer p{color:var(--muted)}
+    .guides{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .guides article{padding:1.2rem}
+    .guides article p:last-child,details p:last-child{margin-bottom:0}
+    .faq{max-width:53rem}
+    details{border-bottom:1px solid var(--line);padding:.8rem 0}
+    summary{cursor:pointer;font-weight:750}
+    details p{margin:.5rem 0 0}
+    footer{border-top:1px solid var(--line);padding:1.15rem 0}
+    .hero a:focus-visible{outline-color:#fff}
+    @media(max-width:760px){.categories,.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:540px){.hero,.guides{grid-template-columns:1fr}.hero figure{padding:.65rem}.hero img{aspect-ratio:2/1}.categories,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "OKEYHAUL spreadsheet – katalog i poradnik zakupowy",
+        "inLanguage": "pl",
+        "description": "Dziesięć kategorii HipobuyFind oraz praktyczny poradnik o wymiarach, zdjęciach QC i wysyłce do Polski."
+      },
+      {
+        "@type": "FAQPage",
+        "inLanguage": "pl",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Co to jest OKEYHAUL spreadsheet?",
+            "acceptedAnswer": {"@type": "Answer", "text": "To określenie katalogu odsyłaczy do ofert, które można porównywać według kategorii. Na tej stronie odsyłacze prowadzą do HipobuyFind."}
+          },
+          {
+            "@type": "Question",
+            "name": "Jak dobrać rozmiar sneakersów?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Zmierz obie stopy i porównaj dłuższy pomiar z tabelą konkretnego sprzedawcy. Sprawdź, czy tabela podaje długość stopy, czy długość wkładki."}
+          },
+          {
+            "@type": "Question",
+            "name": "Czy zdjęcia QC potwierdzają autentyczność?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Same zdjęcia QC nie potwierdzają autentyczności. Pomagają ocenić widoczne cechy egzemplarza, takie jak szwy, kolor i oznaczenie rozmiaru."}
+          },
+          {
+            "@type": "Question",
+            "name": "Jak oszacować koszt dostawy paczki do Polski?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Sprawdź wagę i wymiary zapakowanej przesyłki. Porównaj wyceny dostępnych metod dostawy do Polski wraz z ubezpieczeniem i dodatkowymi opłatami, jeśli mają zastosowanie."}
+          },
+          {
+            "@type": "Question",
+            "name": "Gdzie sprawdzić aktualną cenę i dostępność?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Sprawdź cenę i dostępność wybranego wariantu na stronie sprzedawcy. Przed płatnością potwierdź również warunki zwrotu."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/tbiet/">
+</head>
+<body>
+  <header>
+    <div class="wrap"><a href="https://www.hipobuyfind.com">HipobuyFind <span aria-hidden="true">↗</span></a></div>
+  </header>
+  <main class="wrap">
+    <div class="hero">
+      <div class="intro">
+        <h1>OKEYHAUL spreadsheet</h1>
+        <p>Wybierz kategorię w katalogu HipobuyFind, a przed zakupem porównaj wymiary, zdjęcia z kontroli jakości i koszt dostawy do Polski. To niezależny poradnik zakupowy.</p>
+        <a class="button" href="https://www.hipobuyfind.com">Otwórz HipobuyFind ↗</a>
+      </div>
+      <figure>
+        <img src="https://alssports.vteximg.com.br/arquivos/ids/3880705/10613661x1238466_alt1.jpg?v=639047806774730000" width="640" height="480" fetchpriority="high" loading="eager" alt="Biały sneaker Nike Air Force 1 Texture widziany z boku">
+        <figcaption>Nike Air Force 1 Texture · zdjęcie poglądowe</figcaption>
+      </figure>
+    </div>
+
+    <section aria-labelledby="categories-title">
+      <h2 id="categories-title">Kategorie HipobuyFind</h2>
+      <nav class="categories" aria-label="Kategorie produktów">
+        <a href="https://hipobuyfind.com/category-911-Shoes.html">Buty <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Bluzy i swetry <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-shirty <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-914-Jackets.html">Kurtki <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Spodnie i szorty <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-916-Headwear.html">Nakrycia głowy <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-917-Sets.html">Komplety <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Bielizna <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-919-Jersey.html">Koszulki sportowe <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-920-Accessories.html">Akcesoria <span aria-hidden="true">↗</span></a>
+      </nav>
+    </section>
+
+    <section aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Buty, odzież i dodatki</h2>
+      <p class="section-note">Zdjęcia poglądowe przedstawiają przykładowe modele. Dostępność sprawdź w wybranej ofercie.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://leebarononline.com/cdn/shop/files/1_ac56ae40-9251-4053-8a93-02e68a7ebd68.png?v=1774052580&amp;width=400" width="400" height="400" loading="lazy" decoding="async" alt="Model w czarnej bluzie Nike z kapturem i spodniach dresowych">
+          <figcaption>Bluza Nike Sportswear Club Fleece</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Beżowo-brązowa czapka Gucci z daszkiem i wzorem GG">
+          <figcaption>Czapka Gucci GG</figcaption>
+        </figure>
+        <figure>
+          <img src="https://ca.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-neverfull-mm--M46975_PM1_Side%20view.png?hei=480&amp;wid=480" width="480" height="480" loading="lazy" decoding="async" alt="Brązowa torba Louis Vuitton Neverfull MM we wzór Monogram">
+          <figcaption>Torba Louis Vuitton Neverfull MM</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.hermes.com/is/image/hermesproduct/%E3%82%AB%E3%83%AC-90-%E3%80%8A%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AF%E9%9E%8D%E3%81%AE%E4%B8%AD%E3%81%AB%E3%80%8B--004204S%2001-flat-wm-3-0-0-800-800_g.jpg" width="800" height="800" loading="lazy" decoding="async" alt="Apaszka Hermès Carré 90 z pomarańczową obwódką i motywami siodeł">
+          <figcaption>Apaszka Hermès Carré 90</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.christiandior.cn/is/image/diorprod/LOOK_F_25_2_LOOK_805_E12?%24lookDefault_GH-GHC%24=&amp;bfc=on&amp;crop=568%2C0%2C1864%2C2000&amp;hei=480&amp;qlt=80&amp;scale=1&amp;wid=444" width="444" height="480" loading="lazy" decoding="async" alt="Naszyjnik Dior Petit CD z drobną zawieszką noszony na szyi">
+          <figcaption>Naszyjnik Dior Petit CD</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="guides-title">
+      <h2 id="guides-title">Poradniki przed zakupem</h2>
+      <div class="guides">
+        <article>
+          <h3>Jak czytać katalog ofert?</h3>
+          <p>Zacznij od jednej kategorii i wybierz dwa podobne produkty. W ofercie na Taobao, Weidian lub 1688 porównaj zdjęcia sprzedawcy, skład materiału, dostępność koloru oraz stan magazynowy konkretnego rozmiaru. Zapisz link do produktu i nazwę wariantu, żeby łatwo wrócić do tego samego ogłoszenia.</p>
+          <p>W przypadku czapki sprawdź obwód głowy i zakres regulacji. Przy naszyjniku zapisz długość łańcuszka, a przy torbie porównaj wymiary dna i długość uchwytów.</p>
+        </article>
+        <article>
+          <h3>Jak porównać rozmiary butów i odzieży?</h3>
+          <p>Przy zmianie marki zacznij od wymiarów w centymetrach. W butach zwróć uwagę na długość wkładki i szerokość w przedniej części. Jeśli tabela opiera się na długości stopy, użyj pomiaru stopy. Sposób przeliczania rozmiaru EU sprawdź w opisie danej pary.</p>
+          <p>Bluzę zmierz na płasko pod pachami, od ramienia do dołu i wzdłuż rękawa. W spodniach porównaj szerokość pasa oraz długość nogawki od kroku. W przypadku kurtki uwzględnij miejsce na warstwę pod spodem.</p>
+        </article>
+        <article>
+          <h3>Zdjęcia QC – co sprawdzić na egzemplarzu?</h3>
+          <p>Zdjęcia QC pokazują egzemplarz przedstawiony do kontroli jakości. Sprawdź, czy zgadzają się metka rozmiaru, kolor i liczba elementów w zestawie. Przy butach porównaj obie podeszwy, a przy odzieży obejrzyj szwy, zamki i nadruk w zbliżeniu.</p>
+          <p>Jeśli z ujęcia trudno odczytać wymiar, poproś o zdjęcie z miarką. Zgłoś zauważoną różnicę przed zatwierdzeniem wysyłki i sprawdź termin ewentualnego zwrotu.</p>
+        </article>
+        <article>
+          <h3>Wysyłka do Polski – co wliczyć w koszt?</h3>
+          <p>Zapisz osobno cenę produktu, dostawę do magazynu, opłatę za obsługę oraz wysyłkę międzynarodową. Porównuj końcowe kwoty w PLN według tego samego kursu i sprawdź koszt przewalutowania przed płatnością.</p>
+          <p>Weź pod uwagę wagę rzeczywistą i gabarytową paczki według zasad przewoźnika. Przy porównaniu metod dostawy uwzględnij śledzenie przesyłki, zakres ubezpieczenia i możliwe opłaty importowe. Przy kilku produktach porównaj koszt jednej paczki zbiorczej z wyceną osobnych przesyłek.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Najczęstsze pytania</h2>
+      <details open><summary>Co to jest OKEYHAUL spreadsheet?</summary><p>To określenie katalogu odsyłaczy do ofert, które można porównywać według kategorii. Na tej stronie odsyłacze prowadzą do HipobuyFind.</p></details>
+      <details><summary>Jak dobrać rozmiar sneakersów?</summary><p>Zmierz obie stopy i porównaj dłuższy pomiar z tabelą konkretnego sprzedawcy. Sprawdź, czy tabela podaje długość stopy, czy długość wkładki.</p></details>
+      <details><summary>Czy zdjęcia QC potwierdzają autentyczność?</summary><p>Same zdjęcia QC nie potwierdzają autentyczności. Pomagają ocenić widoczne cechy egzemplarza, takie jak szwy, kolor i oznaczenie rozmiaru.</p></details>
+      <details><summary>Jak oszacować koszt dostawy paczki do Polski?</summary><p>Sprawdź wagę i wymiary zapakowanej przesyłki. Porównaj wyceny dostępnych metod dostawy do Polski wraz z ubezpieczeniem i dodatkowymi opłatami, jeśli mają zastosowanie.</p></details>
+      <details><summary>Gdzie sprawdzić aktualną cenę i dostępność?</summary><p>Sprawdź cenę i dostępność wybranego wariantu na stronie sprzedawcy. Przed płatnością potwierdź również warunki zwrotu.</p></details>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>Niezależny poradnik z odsyłaczami do HipobuyFind. Nazwy marek identyfikują produkty na zdjęciach poglądowych.</p>
+      <a href="https://www.hipobuyfind.com">Przejdź do HipobuyFind ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
